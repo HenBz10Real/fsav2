@@ -36,7 +36,7 @@ else
 			sed -i /"$line"/d /sdcard/AxeronModules/fsav2/bin/read.txt.temp
 		fi
 	done </sdcard/AxeronModules/fsav2/bin/gamelist.txt
-	mv /sdcard/AxeronModules/fsav2/bin/gamelist.txt.temp /sdcard/AxeronModules/fsav2/bin/gamelist.txt
+	mv /sdcard/AxeronModules/fsav2/bin/gamelist.txt.temp /sdcard/AxeronModules/fsav2/bin/read.txt
 	echo ""
 	if [ -f /sdcard/AxeronModules/fsav2/bin/toast.apk ]; then
 		if ! pm list packages | cut -f 2 -d : | grep -q bellavita.toast; then
