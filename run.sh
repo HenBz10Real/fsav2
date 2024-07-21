@@ -24,19 +24,6 @@ else
 	echo ""
 
 	sleep 2
-	cp /sdcard/AxeronModules/fsav2/bin/read.txt /sdcard/AxeronModules/fsav2/bin/read.txt.temp
-	counter=1
-	package_list=$(pm list packages | cut -f 2 -d :)
-	while IFS= read -r gamelist; do
-		line=$(echo "$gamelist" | grep -v " ")
-		if echo "$package_list" | grep -q "$line"; then
-			echo "$counter. $line"
-			counter=$((counter + 1))
-		else
-			sed -i /"$line"/d /sdcard/AxeronModules/fsav2/bin/read.txt.temp
-		fi
-	done </sdcard/AxeronModules/fsav2/bin/read.txt
-	mv /sdcard/AxeronModules/fsav2/bin/read.txt.temp /sdcard/AxeronModules/fsav2/bin/read.txt
 	echo ""
 	if [ -f /sdcard/AxeronModules/fsav2/bin/toast.apk ]; then
 		if ! pm list packages | cut -f 2 -d : | grep -q bellavita.toast; then
