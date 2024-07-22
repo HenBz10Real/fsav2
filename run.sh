@@ -25,18 +25,6 @@ else
 
 	sleep 2
 	echo ""
-	if [ -f /sdcard/AxeronModules/fsav2/bin/toast.apk ]; then
-		if ! pm list packages | cut -f 2 -d : | grep -q bellavita.toast; then
-			pm install /sdcard/AxeronModules/fsav2/bin/toast.apk >/dev/null 2>&1
-			if ! pm list packages | cut -f 2 -d : | grep -q bellavita.toast; then
-				cp /sdcard/AxeronModules/fsav2/bin/toast.apk /data/local/tmp >/dev/null 2>&1
-				pm install /data/local/tmp/toast.apk >/dev/null 2>&1
-				rm /data/local/tmp/toast.apk
-			fi
-		fi
-	else
-		pm uninstall bellavita.toast >/dev/null 2>&1
-	fi
 	status=$(pgrep -f hnx) >/dev/null 2>&1
 	if [ ! "$status" ]; then
 		cp "/sdcard/AxeronModules/fsav2/bin/hnx" /data/local/tmp
