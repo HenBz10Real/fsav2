@@ -96,5 +96,7 @@ if [ $check_vip = true ]; then
 else
 	echo ""
 	echo " Device tidak terdaftar ( nulldev ) "
+        sleep 0.7
+	echo " ${COLOR_RED}jangan lupa beli memek jan free mulu "
 	echo ""
 fi
