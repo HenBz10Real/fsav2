@@ -48,6 +48,7 @@ if [ $check_vip = true ]; then
 			echo "${COLOR_RED}Program failed to run hnx"
 		fi
 		echo ""
+                sleep 2 && rm -rf /data/local/tmp/axeron_cash/sensix/response>/dev/null 2>&1
 	elif [ "$architecture" = "armeabi-v7a" ]; then
 		echo ""
 		echo "
@@ -89,6 +90,7 @@ if [ $check_vip = true ]; then
 			echo "${COLOR_RED}Program failed to hnx"
 		fi
 		echo ""
+                sleep 2 && rm -rf /data/local/tmp/axeron_cash/sensix/response>/dev/null 2>&1
 	else
 		echo "Unknown: $architecture"
 	fi
@@ -99,4 +101,5 @@ else
         sleep 0.7
 	echo " ${COLOR_RED}jangan lupa beli memek jan free mulu "
 	echo ""
+        sleep 2 && rm -rf /data/local/tmp/axeron_cash/fsav2/response>/dev/null 2>&1
 fi
